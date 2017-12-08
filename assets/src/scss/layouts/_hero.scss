@@ -1,0 +1,17 @@
+.hero {
+   &__title {
+      @include font-style(50px, 700, $font-pt, #fefefb);
+      text-transform: uppercase;
+      margin: 250px auto 0;
+      letter-spacing: 10px;
+      
+      
+   }
+   &__subtitle {
+      @include font-style(19px, 400, $font-pt, #fefdfd);
+      font-style: italic;
+      margin: 20px auto 477px;
+      letter-spacing: 3px;
+      
+   }
+}

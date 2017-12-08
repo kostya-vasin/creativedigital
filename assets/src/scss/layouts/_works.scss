@@ -1,0 +1,29 @@
+.works {
+   position: relative;
+
+   &__bg {
+      position: absolute;
+      background-color: #9f9acf;
+      z-index: -100;
+   }
+   &__img {
+      opacity: 0.05;
+      max-height: 1070px;
+   }
+   &__icon {
+      display: block;
+      margin: 0 auto;
+      padding-top: 50px;
+      padding-bottom: 35px;
+   }
+
+   &__title {
+      @include font-style(26px, 700, $font-rlw, #fefbfc);
+      text-transform: uppercase;
+   }
+   &__slider {
+      display: block;
+      margin: 0 auto;
+      padding-top: 70px;
+   }
+}

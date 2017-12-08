@@ -1,0 +1,33 @@
+
+  /**********************/ 
+ /****** FONTS *********/
+/**********************/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|Raleway:300i,400,700');
+     
+       //font: _PT-sant_   
+$font-pt: 'PT Sans', sans-serif;
+      //font: _Raleway_(proxima Nova)
+$font-rlw:'Raleway', sans-serif;
+
+ /****** FONT - colors *********/
+
+
+
+/****** FONT - MIXINS *********/
+
+@mixin font-style($fontSize, $fontWeight, $fontFamily, $color) {
+   font: {
+      size: $fontSize;
+      weight: $fontWeight;
+      family: $fontFamily;
+   }
+   color: $color;
+}
+
+
+  /**********************/ 
+ /******  BODY *********/
+/**********************/
+body {
+     background-color: #ebebeb;
+}

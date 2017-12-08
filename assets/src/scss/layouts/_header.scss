@@ -1,0 +1,47 @@
+.header {
+   position: relative;
+
+   &__bg {
+      position: absolute;
+      background-color: #9f9acf;
+      z-index: -100;
+   }
+   &__img {
+      opacity: 0.5;
+      max-height: 1070px; 
+   }
+   &__row {
+      padding-top: 35px;
+   }
+   &__nav {
+      padding-top: 20px;
+
+   }
+   &__navItem {
+      padding: 0 15px;
+      @include font-style(18px, 400, $font-pt, #ffffff);
+
+      text-transform: uppercase;
+      transition: font-size 0.5s;
+      &:hover {
+         text-decoration: none;
+         @include font-style(19px, 400, $font-pt, #ffffff);
+      }
+   }
+}
+//@media screen and (max-width:480px) {
+//   #nav {
+//      display: none;
+//   }
+//   #header__bg {
+//      width: 100%
+//   }
+//   .my_btn {
+//      
+//   }
+//}
+//@media screen and (min-width:481px) {
+//   #dropdown {
+//      display: none;
+//   }
+//}

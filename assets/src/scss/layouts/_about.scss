@@ -1,0 +1,80 @@
+.about_us {
+   margin-bottom: 240px;
+   height: 100vh;
+
+   &--container {}
+   &__content {
+      position: relative;
+      padding-top: 90px;
+   }
+   &__img {
+      z-index: -1;
+      position: absolute;
+      background: url(../../dist/images/about_us_BIG.png) no-repeat left;
+      background-size: cover;
+      height: 555px;
+      width: 380px;
+      background-position: -60px;
+      &:before {
+         content: '';
+         display: block;
+         width: 100%;
+         height: 100%;
+         background-color: #9f9acf;
+         position: absolute;
+         opacity: 0.5;
+         left: 0;
+      }
+
+   }
+   &__iconWrap {
+      width: 380px;
+      padding-top: 75px;
+      position: relative;
+       &:hover {
+         
+         -webkit-transform: scale(0.93);
+         -moz-transform: scale(0.93);
+         -ms-transform: scale(0.93);
+         transform: scale(0.93);
+         color: #fff;
+         transition: transform ease-out 0.1s, background 0.2s;
+           
+      }
+   }
+   &__icon {
+      padding-bottom: 45px;
+   }
+   &__title {
+      @include font-style(26px, 700, $font-rlw, #fefbfc);
+      text-transform: uppercase;
+   }
+   &__textWrap {
+      padding-top: 75px;
+
+   }
+   &__paragraph {
+      //   min-width: 633px;
+      @include font-style(14px, 400, $font-rlw, #665f60);
+      &--padding {
+         padding-bottom: 95px;
+      }
+   }
+
+   &__link {
+      @include font-style(14px, 400, $font-pt, #7d7a7c);
+      font-style: italic;
+      border: 1px solid #7d7a7c;
+      padding: 18px 52px;
+      margin-left: 222px;
+      margin-bottom: 250px;
+
+      &:hover {
+         text-decoration: none;
+         background-color: #9f9acf;
+         opacity: 0.5;
+         border: none;
+         color: white;
+      }
+   }
+}

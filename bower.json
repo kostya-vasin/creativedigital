@@ -1,0 +1,14 @@
+{
+  "name": "creativedigital",
+  "description": "Creative agency with Bootrstrap",
+  "main": "gulpfile.js",
+  "author": "Kostya Vasin",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+   "foundation-sites": "^6.4.3"
+  }
+}
