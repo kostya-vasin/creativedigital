@@ -1,11 +1,18 @@
-function createSlick(){   
-$('.slider').slick({
+//function createSlick(){   
+//function createSlick(){  
+
+	$(".slider").not('.slick-initialized').slick({
   dots: true,
   infinite: true,
   speed: 500,
   fade: true,
   cssEase: 'linear'
   });
-};
+
+
+//};
+
+
+
 
 

@@ -28,4 +28,22 @@
       margin: 0 auto;
       padding-top: 70px;
    }
+   &__link {
+      @include font-style(14px, 400, $font-pt, #ffffff);
+      display: block;
+      margin: 0 auto;
+      font-style: italic;
+      border: 1px solid #ffffff;
+      padding: 15px 50px;
+    margin-top: 60px;
+      
+
+      &:hover {
+         text-decoration: none;
+         background-color: #ffffff;
+         opacity: 0.5;
+         border: none;
+         color: #9f9acf;
+      }
+   }
 }
