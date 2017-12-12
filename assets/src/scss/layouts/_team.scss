@@ -49,6 +49,25 @@
 
       padding: 20px 12.5px;
    }
-   &__slider{
 }
+
+//----------------------slider
+#multiple-items .slick-prev {
+   left: -55px;
+
+
+}
+
+
+#multiple-items .slick-next {
+   right: -55px;
+   color: #665f60;
+}
+
+#multiple-items .slick-next:before {
+   color: #665f60;
+}
+
+#multiple-items .slick-prev:before {
+   color: #665f60;
 }

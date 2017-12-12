@@ -1,11 +1,70 @@
-//.form {
-//   position: relative;
-//   &__map {
-//      position: absolute;
-//   }
-//}
-//
-//#map {
-//   height: 400px;
-//   width: 100%;
-//}
+.form {
+   position: relative;
+
+
+   &__map {
+      position: absolute;
+      z-index: -100;
+      &::after {
+         background-color: #9f9acf;
+         content: '';
+         display: block;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: 0.5;
+
+      }
+   }
+   &__icon {
+      z-index: 1;
+      margin: 55px auto 25px;
+      
+   }
+   &__title {
+      z-index: 1;
+      @include font-style(26px, 700, $font-rlw, #fefbfc);
+      text-transform: uppercase;
+      margin-bottom: 50px;
+   }
+
+   &__adressIcon, &__telIcon {
+      display: block;
+
+   }
+   &__adressImg {
+      background-color: #9f9acf;
+      padding: 27px;
+//      margin-bottom: 
+
+   }
+   &__adressTextWrap, &__telTextWrap{
+      background-color: #ebebeb;
+      opacity: 0.5;
+       display: none;
+   }
+   &__adressText{
+      @include font-style(18px, 400, $font-pt, #665f60);
+      line-height: 18px;
+      padding: 18px 40px;
+      margin-bottom: 0;
+   }
+   &__telText {
+       @include font-style(18px, 400, $font-pt, #665f60);
+//      line-height: 18px;
+//      padding: 18px 40px;
+      margin-bottom: 0;
+   }
+   &__telImg {
+    background-color: #9f9acf;
+      padding: 28px 36px;
+   }
+
+}
+#map {
+   height: 900px;
+   width: 100%;
+
+}

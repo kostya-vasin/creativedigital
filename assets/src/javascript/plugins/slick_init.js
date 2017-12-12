@@ -1,7 +1,7 @@
 //function createSlick(){   
 //function createSlick(){  
 
-	$(".slider").not('.slick-initialized').slick({
+	$(".slider").slick({
   dots: true,
   infinite: true,
   speed: 500,
