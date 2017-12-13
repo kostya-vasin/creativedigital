@@ -17,7 +17,5 @@
             position: myMarkerPosition,
             icon: myMarker,
             map: map,
-            
-
          });
       }

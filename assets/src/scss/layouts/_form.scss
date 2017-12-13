@@ -1,7 +1,5 @@
 .form {
-   position: relative;
-
-
+   position: relative; //map styles
    &__map {
       position: absolute;
       z-index: -100;
@@ -17,11 +15,11 @@
          opacity: 0.5;
 
       }
-   }
+   } //adress and telephone styles
    &__icon {
       z-index: 1;
       margin: 55px auto 25px;
-      
+
    }
    &__title {
       z-index: 1;
@@ -29,42 +27,118 @@
       text-transform: uppercase;
       margin-bottom: 50px;
    }
-
-   &__adressIcon, &__telIcon {
+   &__contacts {
+      margin-bottom: 40px;
+   }
+   &__adressIcon,
+   &__telIcon {
       display: block;
 
    }
    &__adressImg {
       background-color: #9f9acf;
-      padding: 27px;
-//      margin-bottom: 
-
+      padding: 27px; //      margin-bottom: 
    }
-   &__adressTextWrap, &__telTextWrap{
+
+
+   &__adressTextWrap,
+   &__telTextWrap {
       background-color: #ebebeb;
       opacity: 0.5;
-       display: none;
+      display: none;
    }
-   &__adressText{
+
+
+   &__adressText {
       @include font-style(18px, 400, $font-pt, #665f60);
       line-height: 18px;
       padding: 18px 40px;
       margin-bottom: 0;
+
+   }
+   &__telTextWrap {
+      height: 90px;
+      width: 263px;
+      padding-top: 35px;
+      padding-left: 65px;
    }
    &__telText {
-       @include font-style(18px, 400, $font-pt, #665f60);
-//      line-height: 18px;
-//      padding: 18px 40px;
+      @include font-style(18px, 400, $font-pt, #665f60);
       margin-bottom: 0;
    }
    &__telImg {
-    background-color: #9f9acf;
+      background-color: #9f9acf;
       padding: 28px 36px;
+   } // styles for inputs and textarea button
+   //inouts
+   &__input {
+      background-color: rgba(235, 235, 235, 0.5);
+
+      @include font-style(18px, 400, $font-pt, #665f60);
+      font-style: italic;
+      width: 400px;
+      border: none;
+      border-radius: 5px;
+      padding: 20px 0 20px 25px;
+      margin-bottom: 25px;
+      &--left {
+         margin-right: 15px;
+      }
+      &--rigth {
+         margin-left: 15px;
+      }
+      &::placeholder {
+         color: #fefefe;
+
+      }
+   } //textarea
+   &__textarea {
+      background-color: rgba(235, 235, 235, 0.5);
+
+      @include font-style(18px, 400, $font-pt, #665f60);
+      font-style: italic;
+      width: 815px;
+      border: none;
+      border-radius: 5px;
+      padding-top: 20px;
+      padding-left: 25px;
+      &::placeholder {
+         color: #fefefe;
+
+      }
+   } //button 
+   &__button {
+      border-radius: 5px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+      border-bottom-width: 4px;
+      background-color: #9f9acf;
+      @include font-style(15px, 700, $font-rlw, #fefefe);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 27.5px 70px;
+      margin-top: 55px;
+      &:hover {
+         background-color: #9f9acf * 0.9;
+         border-bottom-color: #9f9acf;
+      }
    }
 
 }
+
 #map {
-   height: 900px;
+   height: 1015px;
    width: 100%;
 
+}
+.top-button {
+    position: fixed;
+    bottom: 45px;
+    right: 130px;
+background-color: #9f9acf;
+opacity: 0.5;
+   padding: 32px 24px; 
+   transition: all 0.3s ease;
 }

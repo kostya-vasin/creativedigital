@@ -21,3 +21,17 @@
        $(".form__telTextWrap").show();
     }); 
 })(jQuery);
+
+(function($){
+	$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {       
+        $('#top-button').fadeIn(200);    
+    } else {
+        $('#top-button').fadeOut(200);       }
+});
+$('#top-button').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 500);
+});
+})(jQuery);
