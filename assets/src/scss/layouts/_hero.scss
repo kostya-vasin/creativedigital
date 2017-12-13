@@ -1,9 +1,14 @@
 .hero {
+   &__container {
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+   }
    &__title {
       @include font-style(50px, 700, $font-pt, #fefefb);
       text-transform: uppercase;
       margin: 250px auto 0;
       letter-spacing: 10px;
+      text-align: center;
       
       
    }
@@ -12,6 +17,6 @@
       font-style: italic;
       margin: 20px auto 477px;
       letter-spacing: 3px;
-      
+      text-align: center;
    }
 }

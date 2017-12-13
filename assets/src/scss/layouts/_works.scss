@@ -9,8 +9,8 @@
    }
    &__img {
       opacity: 0.05;
-      //      max-height: 1070px;
-      min-width: 100%
+      min-width: 100%;
+      @extend .img-fluid;
    }
    &__icon {
       display: block;
@@ -22,11 +22,19 @@
    &__title {
       @include font-style(26px, 700, $font-rlw, #fefbfc);
       text-transform: uppercase;
+      text-align: center;
+   }
+   &__container {
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
    }
    &__slider {
       display: block;
       margin: 0 auto;
       padding-top: 70px;
+   }
+   &__row {
+      @include make-row();
    }
    &__link {
       @include font-style(14px, 400, $font-pt, #ffffff);

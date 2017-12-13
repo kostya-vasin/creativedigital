@@ -10,6 +10,15 @@
    &__title {
       @include font-style(26px, 700, $font-rlw, #665f60);
       text-transform: uppercase;
+      text-align: center;
+   }
+   &__container {
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+   }
+   &__row {
+     @include make-row();
+      justify-content: space-between;
    }
    &__playerWrap {
       position: relative;
@@ -23,6 +32,9 @@
       border: 10px solid #ebebeb;
       border-radius: 50%;
       margin: 0 auto;
+      @extend .img-fluid;
+      display: flex;
+      align-items: center;
    }
    &__playerInfo {
       background-color: #ffffff;
@@ -44,6 +56,10 @@
    &__playerSocial {
       background-color: #9f9acf;
 
+   }
+   &__socialRow{
+      @include make-row();
+      justify-content: center;
    }
    &__socialIcon {
 

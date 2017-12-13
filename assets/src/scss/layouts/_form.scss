@@ -1,5 +1,6 @@
 .form {
-   position: relative; //map styles
+   position: relative;
+   //map styles
    &__map {
       position: absolute;
       z-index: -100;
@@ -15,7 +16,17 @@
          opacity: 0.5;
 
       }
-   } //adress and telephone styles
+   } 
+   &__container {
+       @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+   }
+   &__titleRow {
+      display: flex;
+      flex-direction: column;
+   }
+   
+   //adress and telephone styles
    &__icon {
       z-index: 1;
       margin: 55px auto 25px;
@@ -26,9 +37,14 @@
       @include font-style(26px, 700, $font-rlw, #fefbfc);
       text-transform: uppercase;
       margin-bottom: 50px;
+      text-align: center;
    }
    &__contacts {
       margin-bottom: 40px;
+   }
+   &__adress, &__telephone{
+      display: flex;
+      justify-content: flex-end;
    }
    &__adressIcon,
    &__telIcon {
@@ -54,8 +70,10 @@
       line-height: 18px;
       padding: 18px 40px;
       margin-bottom: 0;
+      text-align: center;
 
    }
+   
    &__telTextWrap {
       height: 90px;
       width: 263px;
@@ -65,11 +83,17 @@
    &__telText {
       @include font-style(18px, 400, $font-pt, #665f60);
       margin-bottom: 0;
+      text-align: center;
    }
    &__telImg {
       background-color: #9f9acf;
       padding: 28px 36px;
-   } // styles for inputs and textarea button
+   } 
+   &__row {
+      @include make-row();
+      justify-content: center;
+   }
+   // styles for inputs and textarea button
    //inouts
    &__input {
       background-color: rgba(235, 235, 235, 0.5);

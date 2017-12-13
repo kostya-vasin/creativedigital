@@ -1,11 +1,15 @@
 .about_us {
    margin-bottom: 240px;
    height: 100vh;
-
-   &--container {}
+   &__container {
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+   }
    &__content {
       position: relative;
       padding-top: 90px;
+      display: flex;
+      justify-content: space-between;
    }
    &__img {
       z-index: -1;
@@ -31,15 +35,18 @@
       width: 380px;
       padding-top: 75px;
       position: relative;
-       &:hover {
-         
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      &:hover {
+
          -webkit-transform: scale(0.93);
          -moz-transform: scale(0.93);
          -ms-transform: scale(0.93);
          transform: scale(0.93);
          color: #fff;
          transition: transform ease-out 0.1s, background 0.2s;
-           
+
       }
    }
    &__icon {
@@ -48,6 +55,7 @@
    &__title {
       @include font-style(26px, 700, $font-rlw, #fefbfc);
       text-transform: uppercase;
+      text-align: center;
    }
    &__textWrap {
       padding-top: 75px;
