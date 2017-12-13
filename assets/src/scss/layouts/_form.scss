@@ -91,7 +91,8 @@
          color: #fefefe;
 
       }
-   } //textarea
+   } 
+   //textarea
    &__textarea {
       background-color: rgba(235, 235, 235, 0.5);
 
@@ -120,6 +121,7 @@
       letter-spacing: 0.3px;
       padding: 27.5px 70px;
       margin-top: 55px;
+      margin-bottom: 54px;
       &:hover {
          background-color: #9f9acf * 0.9;
          border-bottom-color: #9f9acf;
@@ -133,12 +135,14 @@
    width: 100%;
 
 }
+
+//style for move-up button
 .top-button {
-    position: fixed;
-    bottom: 45px;
-    right: 130px;
-background-color: #9f9acf;
-opacity: 0.5;
-   padding: 32px 24px; 
+   position: fixed;
+   bottom: 45px;
+   right: 130px;
+   background-color: #9f9acf;
+   opacity: 0.5;
+   padding: 32px 24px;
    transition: all 0.3s ease;
 }
