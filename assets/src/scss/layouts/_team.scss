@@ -17,7 +17,7 @@
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
    }
    &__row {
-     @include make-row();
+      @include make-row();
       justify-content: space-between;
    }
    &__playerWrap {
@@ -57,13 +57,25 @@
       background-color: #9f9acf;
 
    }
-   &__socialRow{
+   &__socialRow {
       @include make-row();
       justify-content: center;
    }
    &__socialIcon {
 
       padding: 20px 12.5px;
+   }
+}
+
+@media (max-width: 426px) {
+   .team {
+      padding-top: 0;
+      &__icon {
+         display: block;
+         margin: 0 auto;
+         padding-top: 30px;
+         padding-bottom: 15px;
+      }
    }
 }
 

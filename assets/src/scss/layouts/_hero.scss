@@ -9,8 +9,8 @@
       margin: 250px auto 0;
       letter-spacing: 10px;
       text-align: center;
-      
-      
+
+
    }
    &__subtitle {
       @include font-style(19px, 400, $font-pt, #fefdfd);
@@ -19,4 +19,22 @@
       letter-spacing: 3px;
       text-align: center;
    }
+}
+
+@media (max-width: 426px) {
+   .hero {
+   @include make-container();
+   @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      &__title {
+               @include font-style(30px, 700, $font-pt, #fefefb);
+      text-transform: uppercase;
+      margin: 35px auto 0;
+      letter-spacing: 10px;
+      text-align: center;
+
+      }
+      &__subtitle {
+         display: none;
+      }
+}
 }

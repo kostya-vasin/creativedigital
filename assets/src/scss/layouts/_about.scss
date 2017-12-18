@@ -38,6 +38,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      margin-left: 15px;
       &:hover {
 
          -webkit-transform: scale(0.93);
@@ -83,6 +84,37 @@
          opacity: 0.5;
          border: none;
          color: white;
+      }
+   }
+}
+
+@media (max-width: 426px) {
+   .about_us {
+      height: auto;
+          margin-bottom: 58px;
+      &__textWrap {
+         padding-top: 0;
+      }
+      &__icon {
+         padding-bottom: 30px;
+      }
+      &__title {
+         font-size: 20px;
+      }
+      &__img {
+         background: none;
+         max-height: 432px;
+      }
+      &__paragraph {
+         &--padding {
+            padding-bottom: 0;
+         }
+      }
+      &__link {
+         margin: 0 auto;
+         position: absolute;
+         right: 50%;
+         width: 171px;
       }
    }
 }

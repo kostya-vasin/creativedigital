@@ -5,10 +5,10 @@
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
    }
-      &__row {
-         @include make-row();
-      }
- 
+   &__row {
+      @include make-row();
+   }
+
    &__allwrap {
       display: inline-block;
       position: absolute;
@@ -22,8 +22,8 @@
 
    &__bg {
       position: absolute;
-        right: 0;
-    bottom: 0;
+      right: 0;
+      bottom: 0;
 
    }
    &__itemWrap {
@@ -88,5 +88,41 @@
       &--services {
          @include font-style (17px, 400, $font-pt, #fefcfd);
       }
+   }
+}
+
+@media (max-width: 426px) {
+   .services {
+      padding-top: 30px;
+      &__bg {
+         display: none;
+      }
+      &__container {
+         @include make-container();
+         @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      }
+
+      &__contentWrap {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+      &__img {
+         &--services {
+            margin-top: 65px;
+         }
+      }
+      &__title {
+         text-align: center;
+         margin-top: 15px;
+         font-size: 11px;
+         &--services {
+            font-size: 20px;
+            margin-top: 0;
+         }
+      }
+      &__text {
+         display: none;
+      }
+
    }
 }

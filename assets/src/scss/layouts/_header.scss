@@ -1,21 +1,22 @@
 .header {
    position: relative;
 
-
    &__bg {
       position: absolute;
       background-color: #9f9acf;
       z-index: -100;
-      min-width: 100%
-   }
-   &__container {
-      @include make-container();
-      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      min-width: 100%;
+
    }
    &__img {
       opacity: 0.5;
       max-height: 1070px;
       min-width: 100%;
+
+   }
+   &__container {
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
    }
    &__row {
       padding-top: 35px;
@@ -25,11 +26,14 @@
    }
    &__logo {
       height: 74px;
-      width:  57px;
+      width: 57px;
+   }
+   &__dropdown {
+      display: none;
    }
    &__nav {
       padding-top: 20px;
-       
+
    }
    &__navItem {
       padding: 0 15px;
@@ -41,5 +45,68 @@
          text-decoration: none;
          @include font-style(19px, 400, $font-pt, #ffffff);
       }
+   }
+}
+
+@media (max-width: 426px) {
+   .header {
+      &__row {
+          @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      }
+      &__menu {
+         display: none;
+      }
+      &__dropdown {
+         display: inline-block;
+//         background-color: transparent;
+      }
+      &__logo {
+         height: 37px;
+         width: 28.5px;
+         align-self: center;
+      }
+   }
+   .btn-secondary,
+   .btn-secondary:hover,
+   .btn-secondary:active,
+   .btn-secondary:visited,
+   .btn-secondary:focus {
+      background-color: transparent;
+      border-color: transparent;
+   }
+   .dropdown-toggle::after {
+      direction: none;
+   }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+   .header {
+      &__row {
+          @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      }
+      &__menu {
+         display: none;
+      }
+      &__dropdown {
+         display: inline-block;
+//         background-color: transparent;
+      }
+      &__logo {
+         height: 37px;
+         width: 28.5px;
+         align-self: center;
+      }
+   }
+   .btn-secondary,
+   .btn-secondary:hover,
+   .btn-secondary:active,
+   .btn-secondary:visited,
+   .btn-secondary:focus {
+      background-color: transparent;
+      border-color: transparent;
+   }
+   .dropdown-toggle::after {
+      direction: none;
    }
 }

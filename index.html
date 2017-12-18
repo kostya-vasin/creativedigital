@@ -27,7 +27,7 @@
             </div>
             <!-- /.logo -->
             <!-- .menu -->
-            <nav>
+            <nav class="header__menu">
                <ul class="header__nav nav" id="nav">
                   <li><a href="#hero" class="header__navItem">home</a></li>
                   <li><a href="" class="header__navItem">about</a></li>
@@ -38,6 +38,19 @@
             </nav>
 
             <!-- /.menu -->
+<!-- dropdown menu for mobile devices-->
+        <div class="dropdown header__dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/dist/images/hamburger.svg" alt="menu">
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">home</a>
+    <a class="dropdown-item" href="#">about</a>
+    <a class="dropdown-item" href="#">services</a>
+    <a class="dropdown-item" href="#">works</a>
+    <a class="dropdown-item" href="#">contact</a>
+  </div>
+</div>
          </div>
       </div>
       <!--      </div>-->
@@ -59,14 +72,14 @@
 
    <!-- .about-->
    <section class="about_us">
-      <div class="about_us__container">
+      <div class="about_us__container col-12">
          <div class="about_us__content">
             <!-- .about img-->
-            <div class="about_us__imgWrap">
-               <div class="about_us__img col-4">
+            <div class="about_us__imgWrap col-4">
+               <div class="about_us__img col-12">
 
                </div>
-               <div class="about_us__iconWrap ">
+               <div class="about_us__iconWrap col-12">
                   <img src="assets/dist/images/icon-aboutus.svg" alt="" class="about_us__icon">
                   <h2 class="about_us__title ">about us</h2>
                </div>
@@ -322,7 +335,7 @@
       <div class="form__area">
          <div class="form__titleRow">
             <img src="assets/dist/images/form-icon.png" alt="" class="form__icon">
-            <h1 class="form__title">MEET our TEAM</h1>
+            <h1 class="form__title">GET IN TOUCH</h1>
          </div>
          <!--  /title-->
          <!-- contacts-->
