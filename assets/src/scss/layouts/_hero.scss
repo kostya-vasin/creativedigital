@@ -38,3 +38,17 @@
       }
 }
 }
+@media (max-width: 769px) {
+   .hero {
+       &__title {
+               @include font-style(30px, 700, $font-pt, #fefefb);
+      text-transform: uppercase;
+      margin: 90px auto 0;
+      letter-spacing: 10px;
+      text-align: center;
+      }
+      &__subtitle {
+         margin: 20px auto;
+      }
+   }
+}

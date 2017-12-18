@@ -126,3 +126,13 @@
 
    }
 }
+@media (max-width: 769px) {
+   .services {
+      &__title {
+         text-align: center;
+      }
+      &__container {
+         width: 100%;
+      }
+   }
+}

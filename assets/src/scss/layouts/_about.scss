@@ -118,3 +118,26 @@
       }
    }
 }
+@media (max-width: 769px) {
+   .about_us {
+      height: auto;
+      margin-bottom: 120px;
+      &__content {
+             padding-top: 190px;
+      }
+      &__img {
+         height: 450px;
+      }
+      &__textWrap {
+         padding-top: 55px;
+      }
+      &__paragraph {
+         &--padding {
+            padding-bottom: 15px;
+         }
+      }
+      &__link {
+         margin-left: 85px;
+      }
+}
+}
