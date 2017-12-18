@@ -1,6 +1,5 @@
 .form {
-   position: relative;
-   //map styles
+   position: relative; //map styles
    &__map {
       position: absolute;
       z-index: -100;
@@ -16,17 +15,18 @@
          opacity: 0.5;
 
       }
-   } 
+   }
    &__container {
-       @include make-container();
+      @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      &--mobile {
+         display: none;
+      }
    }
    &__titleRow {
       display: flex;
       flex-direction: column;
-   }
-   
-   //adress and telephone styles
+   } //adress and telephone styles
    &__icon {
       z-index: 1;
       margin: 55px auto 25px;
@@ -42,7 +42,8 @@
    &__contacts {
       margin-bottom: 40px;
    }
-   &__adress, &__telephone{
+   &__adress,
+   &__telephone {
       display: flex;
       justify-content: flex-end;
    }
@@ -53,7 +54,7 @@
    }
    &__adressImg {
       background-color: #9f9acf;
-      padding: 27px; //      margin-bottom: 
+      padding: 27px;
    }
 
 
@@ -73,7 +74,7 @@
       text-align: center;
 
    }
-   
+
    &__telTextWrap {
       height: 90px;
       width: 263px;
@@ -88,12 +89,11 @@
    &__telImg {
       background-color: #9f9acf;
       padding: 28px 36px;
-   } 
+   }
    &__row {
       @include make-row();
       justify-content: center;
-   }
-   // styles for inputs and textarea button
+   } // styles for inputs and textarea button
    //inouts
    &__input {
       background-color: rgba(235, 235, 235, 0.5);
@@ -115,8 +115,7 @@
          color: #fefefe;
 
       }
-   } 
-   //textarea
+   } //textarea
    &__textarea {
       background-color: rgba(235, 235, 235, 0.5);
 
@@ -155,7 +154,7 @@
 }
 
 #map {
-   height: 1015px;
+   height: 900px;
    width: 100%;
 
 }
@@ -169,4 +168,62 @@
    opacity: 0.5;
    padding: 32px 24px;
    transition: all 0.3s ease;
+}
+
+@media (max-width: 426px) {
+   #map {
+      height: 100vh;
+      width: 100%;
+   }
+   .form {
+      &__container {
+
+
+         &--mobile {
+            display: block;
+            @include make-container();
+            @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+         }
+      }
+      &__contacts {
+         display: flex;
+         justify-content: space-between;
+      }
+      &__icon {
+         height: 30px;
+         width: 21px;
+         margin: 15px auto 15px;
+      }
+      &__title {
+         @include font-style(20px, 700, $font-rlw, #fefefe);
+         margin-bottom: 15px;
+      }
+      &__adressImg {
+         padding: 10px;
+
+      }
+      &__telImg {
+         padding: 11px 19px;
+      }
+      &__input {
+         padding: 10px 0 10px 15px;
+         margin-bottom: 15px;
+         &--left {
+            margin-right: 0;
+         }
+      }
+      &__textarea {
+         padding-top: 10px;
+         padding-left: 15px;
+      }
+   }
+   .top-button {
+   position: fixed;
+   bottom: 45px;
+   right: 1px;
+   background-color: #9f9acf;
+   opacity: 0.5;
+   padding: 8px 6px;
+   transition: all 0.3s ease;
+}
 }

@@ -4,6 +4,7 @@ $('.multiple-items').slick({
    slidesToScroll: 1,
    arrows: true,
    dots: false,
+   autoplay: false,
    responsive: [
       {
          breakpoint: 768,

@@ -23,3 +23,22 @@ margin-left: 12.5px;
       padding-top: 75px;
    }
 }
+@media (max-width: 426px) {
+   .footer {
+      height: 92px;
+      &__row {
+         padding-top: 0px;
+      }
+      &__rights {
+         margin: 0 auto;
+         margin-top: 10px
+      }
+      &__social {
+         margin: 15px auto;
+      }
+   }
+   
+   
+   
+   
+}

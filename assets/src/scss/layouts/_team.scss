@@ -76,6 +76,10 @@
          padding-top: 30px;
          padding-bottom: 15px;
       }
+       &__title {
+      @include font-style(20px, 700, $font-rlw, #665f60);
+    
+   }
    }
 }
 
