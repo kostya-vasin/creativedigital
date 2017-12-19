@@ -92,7 +92,7 @@
    }
 }
 
-@media (max-width: 769px) {
+@media (min-width: 426px) and (max-width: 769px) {
    .works {
       padding-top: 15px;
       background-color: #9f9acf;

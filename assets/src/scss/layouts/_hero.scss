@@ -38,7 +38,7 @@
       }
 }
 }
-@media (max-width: 769px) {
+@media (min-width: 426px) and (max-width: 769px) {
    .hero {
        &__title {
                @include font-style(30px, 700, $font-pt, #fefefb);

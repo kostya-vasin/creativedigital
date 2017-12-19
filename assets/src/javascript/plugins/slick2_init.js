@@ -3,16 +3,34 @@ $('.multiple-items').slick({
    slidesToShow: 3,
    slidesToScroll: 1,
    arrows: true,
+   rows: 1,
+   
    dots: false,
    autoplay: false,
    responsive: [
-      {
+ {
          breakpoint: 768,
          settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
+            slidesToScroll: 2,
             arrows: false,
             autoplay: true,
             autoplaySpeed: 2000,
+            centerMode: true,
+            rows: 1,
+         }
+    },
+      {
+         breakpoint: 426,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            
+
 
          }
             }

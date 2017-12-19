@@ -126,7 +126,7 @@
 
    }
 }
-@media (max-width: 769px) {
+@media (min-width: 426px) and (max-width: 769px) {
    .services {
       &__title {
          text-align: center;
