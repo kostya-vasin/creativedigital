@@ -1,44 +1,44 @@
 .header {
-   position: relative;
-
+   position: relative; //-------Background image - START
    &__bg {
       position: absolute;
       background-color: #9f9acf;
       z-index: -100;
       min-width: 100%;
-
    }
    &__img {
       opacity: 0.5;
       max-height: 1070px;
       min-width: 100%;
-
-   }
+   } //-------Background image - FINISH
+   //-------Container for Logo & Menu - START
    &__container {
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-   }
+   } //-------Container for Logo & Menu - FINISH
+   //-------Flex row for Logo & Menu - START
    &__row {
       padding-top: 35px;
       @include make-row();
       justify-content: space-between;
-
-   }
+   } //-------Flex row for Logo & Menu - FINISH
+   //-------Logo - START
    &__logo {
       height: 74px;
       width: 57px;
-   }
+   } //-------Logo - FINISH
+   //-------DropDown menu for mobile and tablet - START
+   //swiched-off
    &__dropdown {
       display: none;
-   }
+   } //-------DropDown menu for mobile and tablet - FINISH  
+   //-------Menu - START     
    &__nav {
       padding-top: 20px;
-
    }
    &__navItem {
       padding: 0 15px;
       @include font-style(18px, 400, $font-pt, #ffffff);
-
       text-transform: uppercase;
       transition: font-size 0.5s;
       &:hover {
@@ -48,19 +48,28 @@
    }
 }
 
+//-------Menu - FINISH
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .header {
+
+      //-------Flex row for Logo & Menu - START
       &__row {
-          @include make-container();
-      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-      }
+         @include make-container();
+         @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      } //-------Flex row for Logo & Menu - FINISH
+      //-------NORMAL menu for mobile and tablet - START
+      //swiched-off
       &__menu {
          display: none;
-      }
+      } //-------NORMAL menu for mobile and tablet - Finish  
+      //-------DropDown menu for mobile and tablet - START
+      //turned-on
       &__dropdown {
          display: inline-block;
-//         background-color: transparent;
-      }
+      } //-------DropDown menu for mobile and tablet - START  
       &__logo {
          height: 37px;
          width: 28.5px;
@@ -79,24 +88,35 @@
       direction: none;
    }
 }
+
+//-------MOBILE setting for `max-width 426px` - FINISH
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
 @media (min-width: 426px) and (max-width: 769px) {
    .header {
+      //-------Flex row for Logo & Menu - START
       &__row {
-          @include make-container();
-      @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-      }
+         @include make-container();
+         @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      } //-------Flex row for Logo & Menu - FINISH
+      //-------NORMAL menu for mobile and tablet - START
+      //swiched-off
       &__menu {
          display: none;
-      }
+      } //-------NORMAL menu for mobile and tablet - Finish  
+      //-------DropDown menu for mobile and tablet - START
+      //turned-on
       &__dropdown {
          display: inline-block;
-//         background-color: transparent;
-      }
+      } //-------DropDown menu for mobile and tablet - FINISH 
+      //-------Logo - START
       &__logo {
          height: 37px;
          width: 28.5px;
          align-self: center;
       }
+      //-------Logo - FINISH
    }
    .btn-secondary,
    .btn-secondary:hover,
@@ -110,3 +130,5 @@
       direction: none;
    }
 }
+
+//-------TABLET settings for `max-width 769px` - FINISH

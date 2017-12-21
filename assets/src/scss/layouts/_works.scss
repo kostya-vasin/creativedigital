@@ -112,6 +112,15 @@
          margin-top: 30px;
          margin-bottom: 30px;
       }
+   }
+}
 
+@media (min-width: 1500px) {
+   .works {
+
+      background-color: #9f9acf;
+      &__bg {
+         display: none;
+      }
    }
 }

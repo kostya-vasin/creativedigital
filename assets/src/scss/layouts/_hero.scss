@@ -1,16 +1,16 @@
 .hero {
+   //-------Container for text - START
    &__container {
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-   }
+   } //-------Container for text - FINISH
+   //-------Hero TITLE/SUBTITLE - START
    &__title {
       @include font-style(50px, 700, $font-pt, #fefefb);
       text-transform: uppercase;
       margin: 250px auto 0;
       letter-spacing: 10px;
       text-align: center;
-
-
    }
    &__subtitle {
       @include font-style(19px, 400, $font-pt, #fefdfd);
@@ -19,36 +19,59 @@
       letter-spacing: 3px;
       text-align: center;
    }
-}
-
+} //-------Hero TITLE/SUBTITLE - FINISH
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .hero {
-   @include make-container();
-   @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+      //-------Container for text - START 
+      @include make-container();
+      @include make-container-max-widths($container-max-widths, $grid-breakpoints); //-------Container for text - FINISH
+      //-------Hero TITLE/SUBTITLE - START
+      //subtitle-off
       &__title {
-               @include font-style(30px, 700, $font-pt, #fefefb);
-      text-transform: uppercase;
-      margin: 35px auto 0;
-      letter-spacing: 10px;
-      text-align: center;
-
+         @include font-style(30px, 700, $font-pt, #fefefb);
+         text-transform: uppercase;
+         margin: 35px auto 0;
+         letter-spacing: 10px;
+         text-align: center;
       }
       &__subtitle {
          display: none;
-      }
+      } //-------Hero TITLE/SUBTITLE - FINISH
+   }
 }
-}
+
+//-------MOBILE setting for `max-width 426px` - FINISH 
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
 @media (min-width: 426px) and (max-width: 769px) {
    .hero {
-       &__title {
-               @include font-style(30px, 700, $font-pt, #fefefb);
-      text-transform: uppercase;
-      margin: 90px auto 0;
-      letter-spacing: 10px;
-      text-align: center;
+      //-------Hero TITLE/SUBTITLE - START
+      &__title {
+         @include font-style(30px, 700, $font-pt, #fefefb);
+         text-transform: uppercase;
+         margin: 90px auto 0;
+         letter-spacing: 10px;
+         text-align: center;
       }
       &__subtitle {
          margin: 20px auto;
       }
    }
-}
+} //-------Hero TITLE/SUBTITLE - FINISH
+//-------TABLET settings for `max-width 769px` - FINISH 
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------Big Screens settings for `min-width 1500px` - START 
+@media (min-width: 1500px) {
+   .hero {
+      //-------Hero TITLE/SUBTITLE - START
+      &__subtitle {
+         margin-bottom: 550px;
+      }
+   }
+} //-------Hero TITLE/SUBTITLE - FINISH
+//-------Big Screens settings for `min-width 1500px` - FINISH

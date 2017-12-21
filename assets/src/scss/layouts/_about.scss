@@ -1,16 +1,17 @@
 .about_us {
-   margin-bottom: 240px;
-   height: 100vh;
+   height: 800px; //-------Container for About Content - START
    &__container {
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-   }
+   } //-------Container for About Content - FINISH
+   //-------Contnet: text and img- START
    &__content {
       position: relative;
       padding-top: 90px;
       display: flex;
       justify-content: space-between;
-   }
+   } //-------Contnet: text and img - FINISH
+   //-------Left Image style - START
    &__img {
       z-index: -1;
       position: absolute;
@@ -29,8 +30,9 @@
          opacity: 0.5;
          left: 0;
       }
-
-   }
+   } //-------Left Image style - FINISH
+   //-------ICON and "ABOUT US" - START
+   //-------icon
    &__iconWrap {
       width: 380px;
       padding-top: 75px;
@@ -40,36 +42,32 @@
       flex-direction: column;
       margin-left: 15px;
       &:hover {
-
          -webkit-transform: scale(0.93);
          -moz-transform: scale(0.93);
          -ms-transform: scale(0.93);
          transform: scale(0.93);
          color: #fff;
          transition: transform ease-out 0.1s, background 0.2s;
-
       }
    }
    &__icon {
       padding-bottom: 45px;
-   }
+   } //-------"ABOUT US"
    &__title {
       @include font-style(26px, 700, $font-rlw, #fefbfc);
       text-transform: uppercase;
       text-align: center;
-   }
+   } //-------ICON and "ABOUT US" - FINISH
+   //------- Text - START
    &__textWrap {
       padding-top: 75px;
-
    }
    &__paragraph {
-      //   min-width: 633px;
       @include font-style(14px, 400, $font-rlw, #665f60);
       &--padding {
          padding-bottom: 95px;
-      }
-   }
-
+      } //------- Text - FINISH
+   } //------- Button - START
    &__link {
       @include font-style(14px, 400, $font-pt, #7d7a7c);
       font-style: italic;
@@ -85,49 +83,57 @@
          border: none;
          color: white;
       }
-   }
-}
-
+   } //------- Button - FINISH
+} //
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .about_us {
       height: auto;
-          margin-bottom: 58px;
+      margin-bottom: 58px; //-------"ABOUT US" - START
       &__textWrap {
          padding-top: 0;
       }
-      &__icon {
-         padding-bottom: 30px;
-      }
       &__title {
          font-size: 20px;
-      }
+      } //-------"ABOUT US" - FINISH
+      //-------ICON
+      &__icon {
+         padding-bottom: 30px;
+      } //-------Left Image style - START
       &__img {
          background: none;
          max-height: 432px;
-      }
+      } //-------Left Image style - FINISH
+      //------- Text - START
       &__paragraph {
          &--padding {
             padding-bottom: 0;
-         }
-      }
+         } //------- Text - FINISH
+      } //------- Button - START
       &__link {
          margin: 0 auto;
          position: absolute;
          right: 50%;
          width: 171px;
-      }
+      } //------- Button - FINISH
    }
-}
+}//-------MOBILE setting for `max-width 426px` - FINISH 
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
+
 @media (min-width: 426px) and (max-width: 769px) {
    .about_us {
       height: auto;
-      margin-bottom: 120px;
+      margin-bottom: 120px; //-------Contnet: text and img- START
       &__content {
-             padding-top: 190px;
-      }
+         padding-top: 190px;
+      } //-------Left Image style - START 
       &__img {
-         height: 450px;
-      }
+         height: 450px; //-------Left Image style - FINISH
+      } //-------Contnet: text and img - FINISH
+      //------- Text - START
       &__textWrap {
          padding-top: 55px;
       }
@@ -135,9 +141,11 @@
          &--padding {
             padding-bottom: 15px;
          }
-      }
+      }//------- Text - FINISH
+      //------- Button - START
       &__link {
          margin-left: 85px;
-      }
+      }//------- Button - FINISH
+   }
 }
-}
+//-------TABLET settings for `max-width 769px` - FINISH 

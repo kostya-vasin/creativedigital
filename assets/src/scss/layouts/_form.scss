@@ -217,6 +217,27 @@
          padding-left: 15px;
       }
    }
+   
+   }
+@media (min-width: 426px) and (max-width: 769px) {
+    .form {
+       &__contacts {
+          display: flex;
+         justify-content: space-between;
+       }
+       &__row {
+          justify-content: space-between;
+       }
+       &__input {
+          width: 45%;
+       }
+       &__button {
+          margin: {
+             left: auto;
+             right: auto;
+          }
+       }
+}  
    .top-button {
    position: fixed;
    bottom: 45px;

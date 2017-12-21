@@ -1,31 +1,31 @@
 .services {
+   //-------Container for service's content - START
    &__container {
       position: relative;
       background-color: white;
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-   }
+   } //-------Container - FINISH
+   //-------First and Seconf ROWs for service's content - START
    &__row {
       @include make-row();
-   }
-
+   } //ROWs - FINISH
+   //Style for VERTICAL right block "OUR SERVICES" - START
    &__allwrap {
       display: inline-block;
       position: absolute;
       right: 0;
       top: 0;
       height: 100%;
-
       background-color: #9f9acf;
       opacity: 0.5;
    }
-
    &__bg {
       position: absolute;
       right: 0;
       bottom: 0;
-
-   }
+   } //Style for VERTICAL right block "OUR SERVICES" - FINISH
+   //Style for Service's boxes(web, seo, maobile graphic) - START
    &__itemWrap {
       background-color: #dbdbdb;
       &--web {
@@ -37,15 +37,15 @@
       &--mobile {
          background-color: #dbdbdb;
       }
-   }
+   } //Style for Service's boxes - FINISH
+   //Text and icons in Servicex Boxes + Vertical side - START
    &__contentWrap {
       padding-top: 100px;
       padding-bottom: 100px;
       display: flex;
       flex-direction: column;
       align-items: center;
-
-   }
+   } //icon
    &__img {
       width: 47px;
       height: 61px;
@@ -66,7 +66,7 @@
          height: 60px;
 
       }
-   }
+   } //title
    &__title {
       @include font-style (17px, 700, $font-pt, #665f60);
       text-transform: uppercase;
@@ -80,7 +80,7 @@
          padding-top: 30px;
          padding-bottom: 120px;
       }
-   }
+   } //subtitle
    &__text {
       @include font-style (17px, 400, $font-pt, #665f60);
       font-style: italic;
@@ -88,20 +88,22 @@
       &--services {
          @include font-style (17px, 400, $font-pt, #fefcfd);
       }
-   }
-}
-
+   } //Text and icons in Servicex Boxes + Vertical side - FINISH
+} //
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .services {
-      padding-top: 30px;
+      padding-top: 30px; //Style for VERTICAL right block "OUR SERVICES" - START
       &__bg {
          display: none;
-      }
+      } //Style for VERTICAL right block "OUR SERVICES" - FINISH
+      //-------Container for service's content - START
       &__container {
          @include make-container();
          @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-      }
-
+      } //-------Container - FINISH
+      //Text and icons in Servicex Boxes + Vertical side - START
       &__contentWrap {
          padding-top: 30px;
          padding-bottom: 30px;
@@ -123,16 +125,22 @@
       &__text {
          display: none;
       }
-
-   }
-}
+   } //Text and icons in Servicex Boxes + Vertical side - FINISH
+} //-------MOBILE setting for `max-width 426px` - FINISH 
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
 @media (min-width: 426px) and (max-width: 769px) {
    .services {
+      //Text and icons in Servicex Boxes + Vertical side - START
       &__title {
          text-align: center;
-      }
+      } //Text and icons in Servicex Boxes + Vertical side - FINISH
+      //-------Container for service's content - START
       &__container {
          width: 100%;
-      }
+      } //-------Container for service's content - FINISH
    }
 }
+
+//-------TABLET settings for `max-width 769px` - FINISH

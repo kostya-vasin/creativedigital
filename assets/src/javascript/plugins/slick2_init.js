@@ -3,21 +3,21 @@ $('.multiple-items').slick({
    slidesToShow: 3,
    slidesToScroll: 1,
    arrows: true,
-   rows: 1,
-   
    dots: false,
    autoplay: false,
+   rows: 1,
+  
    responsive: [
- {
-         breakpoint: 768,
+      {
+         breakpoint: 900,
          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             arrows: false,
             autoplay: true,
             autoplaySpeed: 2000,
             centerMode: true,
-            rows: 1,
+            infinite: true,
          }
     },
       {
@@ -29,7 +29,7 @@ $('.multiple-items').slick({
             autoplay: true,
             autoplaySpeed: 2000,
             centerMode: true,
-            
+
 
 
          }

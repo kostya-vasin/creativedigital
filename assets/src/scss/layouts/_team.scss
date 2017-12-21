@@ -70,6 +70,19 @@
    }
 }
 
+
+//----------------------slider
+#multiple-items .slick-prev {
+   left: -55px;
+
+
+}
+
+
+#multiple-items .slick-next {
+   right: -55px;
+   color: #665f60;
+}
 @media (max-width: 426px) {
    .team {
       padding-top: 0;
@@ -95,27 +108,20 @@
 
 @media (min-width: 426px) and (max-width: 769px) {
    .team {
-
+      &__container {
+         margin-left: 0;
+         margin-right: 0;
+         width: 100%;
+         min-width: 768px;
+      }
       &__playerWrap {
-         min-width: 350px;
-         margin-left: 6.5px;
-         margin-right: 6.5px;
+         max-width: 350px;
+         margin-left: 15px;
+         margin-right: 15px;
       }
    }
 }
 
-//----------------------slider
-#multiple-items .slick-prev {
-   left: -55px;
-
-
-}
-
-
-#multiple-items .slick-next {
-   right: -55px;
-   color: #665f60;
-}
 
 #multiple-items .slick-next:before {
    color: #665f60;
