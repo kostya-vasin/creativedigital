@@ -1,17 +1,17 @@
 .team {
-   padding-top: 55px;
+   padding-top: 55px; //------- Styles for main icon and title - START
    &__icon {
       display: block;
       margin: 0 auto;
       padding-top: 50px;
       padding-bottom: 35px;
    }
-
    &__title {
       @include font-style(26px, 700, $font-rlw, #665f60);
       text-transform: uppercase;
       text-align: center;
-   }
+   } //------- Styles for main icon and title - FINISH
+   //------- Content section - START
    &__container {
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
@@ -19,7 +19,7 @@
    &__row {
       @include make-row();
       justify-content: space-between;
-   }
+   } //------- Content section - FINISH
    &__playerWrap {
       position: relative;
       margin-top: 75px;
@@ -28,6 +28,7 @@
       margin-left: 15px;
       margin-right: 15px;
    }
+   //how player looks like - face
    &__playerFace {
       position: absolute;
       left: 35px;
@@ -38,7 +39,7 @@
       @extend .img-fluid;
       display: flex;
       align-items: center;
-   }
+   } //Info about player
    &__playerInfo {
       background-color: #ffffff;
    }
@@ -71,18 +72,20 @@
 }
 
 
-//----------------------slider
+//-----slider
 #multiple-items .slick-prev {
    left: -55px;
-
-
 }
-
 
 #multiple-items .slick-next {
    right: -55px;
    color: #665f60;
 }
+
+//-----slider - FINISH
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .team {
       padding-top: 0;
@@ -105,7 +108,10 @@
       }
    }
 }
-
+//-------MOBILE setting for `max-width 426px` - Finish  
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
 @media (min-width: 426px) and (max-width: 769px) {
    .team {
       &__container {

@@ -1,6 +1,5 @@
 .works {
-   position: relative;
-
+   position: relative; //------background - START
    &__bg {
       position: absolute;
       background-color: #9f9acf;
@@ -11,23 +10,24 @@
       opacity: 0.05;
       min-width: 100%;
       @extend .img-fluid;
-   }
+   } //------background - FINISH
+   //------ICON and TITLE of the section - START
    &__icon {
       display: block;
       margin: 0 auto;
       padding-top: 50px;
       padding-bottom: 35px;
    }
-
    &__title {
       @include font-style(26px, 700, $font-rlw, #fefbfc);
       text-transform: uppercase;
       text-align: center;
-   }
+   } //------ICON and TITLE of the section - FINISH
+   //------Container for content - START
    &__container {
       @include make-container();
       @include make-container-max-widths($container-max-widths, $grid-breakpoints);
-   }
+   } //------Container for content - FINISH
    &__slider {
       display: block;
       margin: 0 auto;
@@ -36,6 +36,7 @@
    &__row {
       @include make-row();
    }
+   //------Button - START
    &__link {
       @include font-style(14px, 400, $font-pt, #ffffff);
       display: block;
@@ -44,8 +45,6 @@
       border: 1px solid #ffffff;
       padding: 15px 50px;
       margin-top: 60px;
-
-
       &:hover {
          text-decoration: none;
          background-color: #ffffff;
@@ -53,9 +52,11 @@
          border: 1px solid #ffffff;
          color: #9f9acf;
       }
-   }
+   }  //------Button - FINISH
 }
-
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------MOBILE setting for `max-width 426px` - START  
 @media (max-width: 426px) {
    .works {
       background-color: rgba(159, 154, 207, 0.5);
@@ -91,7 +92,10 @@
       }
    }
 }
-
+//-------MOBILE setting for `max-width 426px` - Finish
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------TABLET settings for `max-width 769px` - START 
 @media (min-width: 426px) and (max-width: 769px) {
    .works {
       padding-top: 15px;
@@ -114,7 +118,10 @@
       }
    }
 }
-
+//-------TABLET settings for `max-width 769px` - FINISH 
+//
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-------BIGSCREENS settings for `min-width 1500px` - START 
 @media (min-width: 1500px) {
    .works {
 
